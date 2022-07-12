@@ -51,3 +51,5 @@
        systemctl enable docker
        systemctl start docker
        systemctl status docker
+       systemctl enable kubelet
+       systemctl restart kubelet
