@@ -28,3 +28,7 @@
       shell: |
         yes | cp  /etc/kubernetes/admin.conf $HOME/.kube/config
         kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+    - name: Install Terraform
+      shell: |
+        sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+        sudo yum -y install terraform
