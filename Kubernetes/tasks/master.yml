@@ -16,7 +16,7 @@
       when: reset == "yes"
     - name: Kubeadm Inıt And Token Create 
       shell: |
-        kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.0.20 --apiserver-cert-extra-sans=10.0.0.20
+        kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=10.0.0.10 --apiserver-cert-extra-sans=10.0.0.10
       register: token
     - name: Saving Token File
       local_action: copy content={{token.stdout}} dest=/root/token_file.txt
